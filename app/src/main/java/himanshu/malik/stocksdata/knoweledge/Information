@@ -1,0 +1,14 @@
+
+- create separate data and domain classes for remove dependency with api library.
+
+- domain layer is the inner most layer and every other layer is allowed to access this layer.
+
+- domain layer is the optional layer as described by google.
+
+
+
+
+
+
+Read this for making submodule layers with solid and clean architecture
+https://antonioleiva.com/clean-architecture-android/
