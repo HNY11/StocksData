@@ -5,7 +5,7 @@
 
 - domain layer is the optional layer as described by google.
 
-
+- domain layer should not access the data layer
 
 
 
