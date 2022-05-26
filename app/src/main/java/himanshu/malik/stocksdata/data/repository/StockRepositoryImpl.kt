@@ -27,9 +27,9 @@ import javax.inject.Singleton
 
 @Singleton
 class StockRepositoryImpl @Inject constructor(
-    val api: StockApi,
-    val db: StockDatabase,
-    val stockListingParser: CSVParser<StockListing>
+    private val api: StockApi,
+    private val db: StockDatabase,
+    private val stockListingParser: CSVParser<StockListing>
 ): StockRepository
  {
      private val dao = db.dao
@@ -66,7 +66,7 @@ class StockRepositoryImpl @Inject constructor(
              }
 
              remoteListings?.let { listing ->
-                 // why need to clear data
+                 // TODO: why need to clear data
                  // we can use replace strategy
                  dao.clearStockListings()
                  dao.insertStockListings(
